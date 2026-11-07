@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>What's Today's Look?</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+        <body>
+            <div>
+                <input type="file" id="background-input" accept="image/*">
+                <button id="change-background">Change Background</button>
+            </div>
+            <h1><span class="outlined-text">What's Today's Look?</span></h1>
+            <style>
+                .outlined-text {
+                    font-size: auto;
+                    font-weight: normal;
+                    color: pink;
+                    -webkit-text-stroke: 2px white;
+                    text-shadow:
+                        2px 2px 0 #000,
+                        -2px -2px 0 #000,
+                        2px -2px 0 #000,
+                        -2px 2px 0 #000;
+                }
+            </style>
+            <div id="outfit-display">
+                <section class="clothing-row">
+                    <img id="pullover" src="" alt="White Coat" style="width: 300px; height: 300px"> 
+                    <button id="change-pullover">Change Pullover</button>
+                </section>
+            </div>
+            <div id="outfit-display">
+                <section class="clothing-row">
+                    <img id="top" src="" alt="White T-Shirt" style="width: 300px; height: 300px;">
+                    <button id="change-top">Change Top</button>
+                </section>
+            </div>
+            <div id="outfit-display">
+                <section class="clothing-row">
+                    <img id="bottom" src="" alt="Bell Bottoms" style="width: 300px; height: 300px;">
+                    <button id="change-bottom">Change Bottom</button>
+                </section>
+            </div>
+            <div class="add-clothing">
+                <input type="text" id="clothing-name" placeholder="Enter a clothing name!">
+                <select id="clothing-category">
+                    <option value="pullover">Pullover</option>
+                    <option value="top">Top</option>
+                    <option value="bottom">Bottom</option>
+                </select>
+                <input type="file" id="clothing-input" accept="image/*">
+                <button id="add-clothing">Add Clothing</button>
+            </div>
+            <div class="remove-clothing">
+                <select id="remove-category">
+                    <option value="pullover">Pullover</option>
+                    <option value="top">Top</option>
+                    <option value="bottom">Bottom</option>
+                </select>
+                <select id="remove-item"></select>
+                <button id="remove-clothing">Remove Clothing</button>
+            </div>
+            <div>
+                <button id="save-clothing">Save Clothing</button>
+            </div>
+            <script src="script.js"></script>
+        </body>
+</html>
